@@ -1,0 +1,177 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="Theme.Sherlock.ForceOverflow">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="actionBarStyle">@style/Widget.Styled.ActivityActionBar</item>
+        <item name="android:actionBarStyle">@style/Widget.Styled.ActivityActionBar</item>
+        <item name="actionOverflowButtonStyle">@style/Widget.ActionBar.ActionButton.Overflow</item>
+        <item name="android:actionOverflowButtonStyle">@style/Widget.ActionBar.ActionButton.Overflow</item>
+    </style>
+    
+    <style name="Widget.Styled.ActivityActionBar" parent="Widget.Sherlock.Light.ActionBar">
+        <item name="background">@color/home_bg</item>
+        <item name="divider">@android:color/transparent</item>
+        <item name="titleTextStyle">@style/widget.ActionBar.TitleTextStyle</item>
+        
+        <item name="android:background">@color/home_bg</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:titleTextStyle">@style/widget.ActionBar.TitleTextStyle</item>
+    </style>
+    
+    <style name="widget.ActionBar.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+		<item name="android:textColor">@color/font_color</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	
+        <style name="Widget.ActionBar.ActionButton.Overflow" parent="Widget.Sherlock.ActionButton.Overflow">
+       <item name="android:src">@drawable/ic_menu</item>
+    </style>
+
+        
+        <!--   <style name="Theme_Activity_Base" parent="Theme.Sherlock.ForceOverflow">
+        <item name="android:checkboxStyle">@style/CheckboxStyle.Custom</item>
+    </style>
+    
+    <style name="Theme_Activity" parent="Theme_Activity_Base">
+        <item name="android:actionBarStyle">@style/Widget.Styled.ActivityActionBar</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_actionbar_back</item>
+        <item name="android:actionOverflowButtonStyle">@style/Widget.ActionBar.ActionButton.Overflow</item>
+        <item name="android:windowContentOverlay">@drawable/top_shadow_repeat</item>
+    </style>
+    
+    <style name="Widget.Styled.ActivityActionBar" parent="Widget.Sherlock.Light.ActionBar">
+        <item name="android:background">@drawable/actionbar_bg</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:titleTextStyle">@style/widget.ActionBar.TitleTextStyle</item>
+        <item name="android:height">50dp</item>
+    </style>
+    
+    <style name="widget.ActionBar.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+	
+    <style name="widget.ActionBar.TabStyle" parent="Widget.Sherlock.Light.ActionBar.TabBar">
+		<item name="android:background">@drawable/actionbar_tab_bg</item>
+		<item name="android:gravity">center_horizontal</item>
+	</style>
+	
+     <style name="Widget.ActionBar.ActionButton.Overflow" parent="Widget.Sherlock.ActionButton.Overflow">
+       <item name="android:src">@drawable/ic_menu_moreoverflow</item>
+    </style>
+	
+    photo player actionbar
+    <style name="Theme_Photo_Activity" parent="Theme.Sherlock.ForceOverflow">
+        <item name="android:actionBarStyle">@style/Widget.Styled.PhotoActionBar</item>
+    </style>
+    
+    <style name="Widget.Styled.PhotoActionBar" parent="Widget.Sherlock.Light.ActionBar">
+        <item name="android:background">@drawable/media_controller_bg</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:titleTextStyle">@style/widget.ActionBar.PhotoTitleTextStyle</item>
+    </style>
+    
+    <style name="widget.ActionBar.PhotoTitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+		<item name="android:textColor">@color/white</item>
+	</style>
+	
+    setting actionbar
+    <style name="Theme_Setting_Activity" parent="Theme.Sherlock.Light">
+        <item name="android:homeAsUpIndicator">@drawable/ic_actionbar_back</item>
+        <item name="android:actionBarStyle">@style/Widget.Styled.ActivityActionBar</item>
+        <item name="android:actionBarTabStyle">@style/widget.ActionBar.TabStyle</item>
+        <item name="android:actionBarTabTextStyle">@style/MyActionBarTabTextStyle</item>
+        <item name="android:listViewStyle">@style/ListViewStyle.MediaList</item>
+        <item name="android:checkboxStyle">@style/CheckboxStyle.Custom</item>
+        <item name="android:textColorPrimary">@color/list_item_text_color_primary</item>
+        <item name="android:textColorSecondary">@color/list_item_text_color_secondary</item>
+        <item name="android:windowContentOverlay">@drawable/top_shadow_repeat</item>
+    </style>
+    
+    <style name="MyActionBarTabTextStyle" parent="Widget.Sherlock.ActionBar.TabText">
+        <item name="android:textColor">@color/actionbar_tab_text_color</item>
+    </style>
+    
+    <style name="NoActionBar" parent="@android:style/Theme.Holo.Light">
+    	<item name="android:windowActionBar">false</item>
+	</style>
+	 -->
+	 
+	  <!--  <style name="Theme_Activity_Base" parent="Theme.Sherlock.ForceOverflow">
+        <item name="android:checkboxStyle">@style/CheckboxStyle.Custom</item>
+    </style>
+    
+    <style name="Theme_Activity" parent="Theme_Activity_Base">
+        <item name="actionBarStyle">@style/Widget.Styled.ActivityActionBar</item>
+        <item name="homeAsUpIndicator">@drawable/ic_actionbar_back</item>
+        <item name="actionOverflowButtonStyle">@style/Widget.ActionBar.ActionButton.Overflow</item>
+    </style>
+    
+    <style name="Widget.Styled.ActivityActionBar" parent="Widget.Sherlock.Light.ActionBar">
+        <item name="background">@drawable/actionbar_bg</item>
+        <item name="divider">@android:color/transparent</item>
+        <item name="titleTextStyle">@style/widget.ActionBar.TitleTextStyle</item>
+        <item name="height">50dp</item>
+    </style>
+    
+    <style name="widget.ActionBar.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+	
+    <style name="widget.ActionBar.TabStyle" parent="Widget.Sherlock.Light.ActionBar.TabBar">
+		<item name="android:background">@drawable/actionbar_tab_bg</item>
+		<item name="android:gravity">center_horizontal</item>
+	</style>
+	
+    <style name="Widget.ActionBar.ActionButton.Overflow" parent="Widget.Sherlock.ActionButton.Overflow">
+       <item name="android:src">@drawable/ic_menu_moreoverflow</item>
+    </style>
+	
+    photo player actionbar
+    <style name="Theme_Photo_Activity" parent="Theme.Sherlock.ForceOverflow">
+        <item name="actionBarStyle">@style/Widget.Styled.PhotoActionBar</item>
+    </style>
+    
+    <style name="Widget.Styled.PhotoActionBar" parent="Widget.Sherlock.Light.ActionBar">
+        <item name="background">@drawable/media_controller_bg</item>
+        <item name="divider">@android:color/transparent</item>
+        <item name="titleTextStyle">@style/widget.ActionBar.PhotoTitleTextStyle</item>
+    </style>
+    
+    <style name="widget.ActionBar.PhotoTitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+		<item name="android:textColor">@color/white</item>
+	</style>
+	
+    setting actionbar
+    <style name="Theme_Setting_Activity" parent="Theme.Sherlock.Light">
+        <item name="android:homeAsUpIndicator">@drawable/ic_actionbar_back</item>
+        <item name="actionBarStyle">@style/Widget.Styled.ActivityActionBar</item>
+        <item name="actionBarTabStyle">@style/widget.ActionBar.TabStyle</item>
+        <item name="actionBarTabTextStyle">@style/MyActionBarTabTextStyle</item>
+        <item name="android:listViewStyle">@style/ListViewStyle.MediaList</item>
+        <item name="android:checkboxStyle">@style/CheckboxStyle.Custom</item>
+        <item name="android:textColorPrimary">@color/list_item_text_color_primary</item>
+        <item name="android:textColorSecondary">@color/list_item_text_color_secondary</item>
+    </style>
+    
+    <style name="MyActionBarTabTextStyle" parent="Widget.Sherlock.ActionBar.TabText">
+        <item name="android:textColor">@color/actionbar_tab_text_color</item>
+    </style>
+	
+    <style name="NoActionBar" parent="@android:style/Theme.Holo.Light">
+    	<item name="android:windowActionBar">false</item>
+	</style>
+	-->
+</resources>
