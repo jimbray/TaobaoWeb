@@ -906,11 +906,12 @@ containing a value of this type.
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090009;
         public static final int app_name=0x7f09000a;
-        public static final int home_url=0x7f09000e;
+        public static final int home_url=0x7f09000f;
+        public static final int loading_txt=0x7f09000e;
         public static final int menu_exit=0x7f09000b;
         public static final int menu_left=0x7f09000c;
         public static final int menu_right=0x7f09000d;
-        public static final int taobao_home_url=0x7f09000f;
+        public static final int taobao_home_url=0x7f090010;
     }
     public static final class style {
         /** 

@@ -6,9 +6,12 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -16,6 +19,8 @@ import android.webkit.WebViewClient;
 public class MainActivity extends SherlockActivity {
 	private static final String TAG = MainActivity.class.getSimpleName();
 	private JimbrayWebView mWebView;
+	
+	private ProgressDialog mPgbDlg;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,7 @@ public class MainActivity extends SherlockActivity {
 		setContentView(R.layout.activity_main);
 		
 		initActionBar();
+		init();
 		
 		mWebView = (JimbrayWebView) findViewById(R.id.jimbray_webview);
 		WebSettings webSetting = mWebView.getSettings();
@@ -31,7 +37,6 @@ public class MainActivity extends SherlockActivity {
 
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
-				// TODO Auto-generated method stub
 				Log.d(TAG, "========loading url is " + url + " =======");
 				if(url.startsWith(getString(R.string.taobao_home_url))) {
 					url = getString(R.string.home_url);
@@ -40,9 +45,39 @@ public class MainActivity extends SherlockActivity {
 				return false;
 			}
 			
+			@Override
+			public void onPageStarted(WebView view, String url, Bitmap favicon) {
+				showProgress(getString(R.string.loading_txt));
+				super.onPageStarted(view, url, favicon);
+			}
+			
+			@Override
+			public void onPageFinished(WebView view, String url) {
+				dismissProgress();
+				super.onPageFinished(view, url);
+			}
+			
 		});
 		
 		mWebView.loadUrl(getString(R.string.home_url));
+	}
+	
+	private void init() {
+		mPgbDlg = new ProgressDialog(this);
+	}
+	
+	private void showProgress(String txt) {
+		if(mPgbDlg != null) {
+			mPgbDlg.setMessage(txt);
+			mPgbDlg.show();
+		}
+	}
+	
+	private void dismissProgress() {
+		if(mPgbDlg != null) {
+			mPgbDlg.dismiss();
+			mPgbDlg.cancel();
+		}
 	}
 	
 	private void initActionBar() {
