@@ -89,6 +89,13 @@ public class MainActivity extends SherlockActivity {
 			case R.id.menu_exit:
 				finish();
 				break;
+			case R.id.menu_left:
+				mWebView.goBack();
+				break;
+				
+			case R.id.menu_right:
+				mWebView.goForward();
+				break;
 		}
 		return super.onOptionsItemSelected(item);
 	}
