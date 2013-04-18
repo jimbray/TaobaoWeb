@@ -6,22 +6,25 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 public class MainActivity extends SherlockActivity {
 	private static final String TAG = MainActivity.class.getSimpleName();
 	private JimbrayWebView mWebView;
 	
-	private ProgressDialog mPgbDlg;
-
+	private Dialog mPgbDlg;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,7 +41,7 @@ public class MainActivity extends SherlockActivity {
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
 				Log.d(TAG, "========loading url is " + url + " =======");
-				if(url.startsWith(getString(R.string.taobao_home_url))) {
+				if(url.startsWith(getString(R.string.taobao_home_url)) || url.startsWith(getString(R.string.taobao_home_url_on_pc))) {
 					url = getString(R.string.home_url);
 				}
 				view.loadUrl(url);
@@ -59,16 +62,16 @@ public class MainActivity extends SherlockActivity {
 			
 		});
 		
-		mWebView.loadUrl(getString(R.string.home_url));
+		mWebView.loadUrl((getString(R.string.home_url)));
 	}
 	
 	private void init() {
-		mPgbDlg = new ProgressDialog(this);
+		mPgbDlg = new Dialog(this, R.style.Progress_Dialog_Theme);
+		mPgbDlg.setContentView(R.layout.layout_progress_loading);
 	}
 	
 	private void showProgress(String txt) {
 		if(mPgbDlg != null) {
-			mPgbDlg.setMessage(txt);
 			mPgbDlg.show();
 		}
 	}
@@ -83,7 +86,7 @@ public class MainActivity extends SherlockActivity {
 	private void initActionBar() {
 		ActionBar actionBar = getSupportActionBar();
 		if(actionBar != null) {
-			
+			actionBar.setHomeButtonEnabled(true);
 		}
 	}
 	
@@ -95,6 +98,7 @@ public class MainActivity extends SherlockActivity {
 		if(event.getAction() == KeyEvent.ACTION_DOWN) {
 			switch(keyCode) {
 				case KeyEvent.KEYCODE_BACK:
+					Log.d(TAG, "==========OnKeyDown == curUrl= " + mWebView.getUrl());
 					if(!mWebView.getUrl().equals(getString(R.string.home_url))) {
 						mWebView.goBack();
 						isProcessed = true;
@@ -131,8 +135,17 @@ public class MainActivity extends SherlockActivity {
 			case R.id.menu_right:
 				mWebView.goForward();
 				break;
+				
+			case android.R.id.home:
+				String url = null;
+				String homeUrl = getString(R.string.home_url);
+				if(!TextUtils.isEmpty(url = mWebView.getUrl())) {
+					if(!url.equals(homeUrl)) {
+						mWebView.loadUrl(homeUrl);
+					}
+				}
+				break;
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
 }

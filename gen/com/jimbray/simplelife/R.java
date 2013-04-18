@@ -592,12 +592,13 @@ containing a value of this type.
         public static final int abs__bright_foreground_inverse_holo_dark=0x7f060006;
         public static final int abs__bright_foreground_inverse_holo_light=0x7f060007;
         public static final int abs__holo_blue_light=0x7f060008;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f06000b;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f06000c;
-        public static final int abs__primary_text_holo_dark=0x7f06000d;
-        public static final int abs__primary_text_holo_light=0x7f06000e;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f06000c;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f06000d;
+        public static final int abs__primary_text_holo_dark=0x7f06000e;
+        public static final int abs__primary_text_holo_light=0x7f06000f;
         public static final int font_color=0x7f06000a;
         public static final int home_bg=0x7f060009;
+        public static final int main_bg=0x7f06000b;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -795,8 +796,9 @@ containing a value of this type.
         public static final int abs__tab_unselected_pressed_holo=0x7f02005c;
         public static final int ic_menu=0x7f02005d;
         public static final int icon=0x7f02005e;
-        public static final int point_left=0x7f02005f;
-        public static final int point_right=0x7f020060;
+        public static final int loading_progress_bg=0x7f02005f;
+        public static final int point_left=0x7f020060;
+        public static final int point_right=0x7f020061;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f040022;
@@ -868,8 +870,9 @@ containing a value of this type.
         public static final int abs__screen_simple=0x7f030012;
         public static final int abs__screen_simple_overlay_action_mode=0x7f030013;
         public static final int activity_main=0x7f030014;
-        public static final int sherlock_spinner_dropdown_item=0x7f030015;
-        public static final int sherlock_spinner_item=0x7f030016;
+        public static final int layout_progress_loading=0x7f030015;
+        public static final int sherlock_spinner_dropdown_item=0x7f030016;
+        public static final int sherlock_spinner_item=0x7f030017;
     }
     public static final class menu {
         public static final int activity_main=0x7f0b0000;
@@ -912,6 +915,7 @@ containing a value of this type.
         public static final int menu_left=0x7f09000c;
         public static final int menu_right=0x7f09000d;
         public static final int taobao_home_url=0x7f090010;
+        public static final int taobao_home_url_on_pc=0x7f090011;
     }
     public static final class style {
         /** 
@@ -941,6 +945,10 @@ containing a value of this type.
         public static final int AppTheme=0x7f0a0059;
         public static final int DialogWindowTitle_Sherlock=0x7f0a0033;
         public static final int DialogWindowTitle_Sherlock_Light=0x7f0a0034;
+        /** 模糊
+ <item name="android:windowContentOverlay">@null</item> 
+         */
+        public static final int Progress_Dialog_Theme=0x7f0a005d;
         public static final int Sherlock___TextAppearance_Small=0x7f0a0047;
         public static final int Sherlock___Theme=0x7f0a004a;
         public static final int Sherlock___Theme_DarkActionBar=0x7f0a004c;

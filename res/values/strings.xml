@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">米乐米丫</string>
+    <string name="app_name">米乐米丫●淘宝</string>
     <string name="menu_exit">退出</string>
     <string name="menu_left">后退</string>
     <string name="menu_right">前进</string>
@@ -10,5 +10,6 @@
     
     <string name="home_url">http://shop100101335.m.taobao.com/</string>
     <string name="taobao_home_url">http://m.taobao.com/</string>
+    <string name="taobao_home_url_on_pc">http://www.taobao.com/</string>
 
 </resources>

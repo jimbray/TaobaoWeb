@@ -19,6 +19,7 @@
         <item name="android:actionBarStyle">@style/Widget.Styled.ActivityActionBar</item>
         <item name="actionOverflowButtonStyle">@style/Widget.ActionBar.ActionButton.Overflow</item>
         <item name="android:actionOverflowButtonStyle">@style/Widget.ActionBar.ActionButton.Overflow</item>
+        <item name="android:windowBackground">@color/main_bg</item>
     </style>
     
     <style name="Widget.Styled.ActivityActionBar" parent="Widget.Sherlock.Light.ActionBar">
@@ -36,8 +37,18 @@
 		<item name="android:textStyle">bold</item>
 	</style>
 	
-        <style name="Widget.ActionBar.ActionButton.Overflow" parent="Widget.Sherlock.ActionButton.Overflow">
+    <style name="Widget.ActionBar.ActionButton.Overflow" parent="Widget.Sherlock.ActionButton.Overflow">
        <item name="android:src">@drawable/ic_menu</item>
+    </style>
+    
+    <style name="Progress_Dialog_Theme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>边框
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明   去掉背景色边框也就去掉了 -->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+        <!-- <item name="android:windowContentOverlay">@null</item> -->
     </style>
 
         

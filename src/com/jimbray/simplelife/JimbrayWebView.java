@@ -17,6 +17,7 @@ package com.jimbray.simplelife;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.webkit.WebView;
 
@@ -32,6 +33,7 @@ import android.webkit.WebView;
 
  */
 public class JimbrayWebView extends WebView {
+	private static final String TAG = JimbrayWebView.class.getSimpleName();
 
 	public JimbrayWebView(Context context, AttributeSet attrs) {
 		super(context, attrs);
